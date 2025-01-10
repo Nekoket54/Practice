@@ -127,22 +127,16 @@ balance.textContent = cash + '₴'
 
 
 
-// buy.forEach(button => {
-//     button.addEventListener('click',function(element){
-//         let jojo = 
-//         cash -= parseInt(price.textContent)
-//         balance.textContent = cash + '₴'
-//     // alert('Дякую за покупку')
-//     })
-// })
-
 buy.forEach(function(element){
     element.addEventListener('click',function(){
-        let jojo = parseInt(element.previousElementSibling.previousElementSibling.textContent)
-        cash = cash - jojo
-        // cash -= parseInt(price.textContent)
-        balance.textContent = `${cash}₴`
-    // alert('Дякую за покупку')
+        let itemAmount = parseInt(element.previousElementSibling.previousElementSibling.textContent)
+        if (itemAmount < cash) {
+            cash = cash - itemAmount
+            balance.textContent = `${cash}₴`
+        alert('Дякую за покупку')
+        }else{
+            alert('Нажаль вам не вистачає коштів(')
+        }
     })
 })
 
