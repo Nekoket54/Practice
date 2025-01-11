@@ -142,33 +142,32 @@ buy.forEach(function(element){
 
 
 
+const signUp = document.querySelector('.sign-up')
+const registrationForm = document.querySelector('.registration-form')
+const formClose = document.querySelector('.registration-form-button-close')
+
+signUp.addEventListener('click',function(){
+    registrationForm.classList.replace('hidden','visible')
+})
+formClose.addEventListener('click',function(){
+    registrationForm.classList.replace('visible','hidden')
+})
 
 
-
-
-
-
-
-
-
-
-
-
-// const searchInput = document.getElementById('search-input')
-
-// const accessibleProducts = products.filter(function(element){
-//     return element.available == true
-// })
-
-// let searchInputValue = searchInput.value  
-// if(accessibleProducts == 'Доступні'){
-//     container.innerHTML += `
-//     <div class="card">
-//     <img src="${element.photo}" alt="" class="photo">
-//     <h1 class="name">${element.name}</h1>
-//     <p class="price">${element.price}₴</p>
-//     <p class="availability">${element.available == true ? 'Доступний' : 'Недоступний'}</p>
-//     <button class="buy">Buy</button>
-//     </div>
-//     `
-// }
+const inputName = document.getElementById('username')
+const form =  document.querySelector('form')
+const registration = document.querySelector('.registration')
+const userName = document.querySelector('.userName')
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+    alert(`Вітаю ${inputName.value}`)
+    registrationForm.classList.replace('visible','hidden')
+    signUp.style.display = 'none'
+    registration.innerHTML += `
+    <img src="./free-icon-profile-7710521.png" alt="" width="40px">
+    <p class="userName">${inputName.value}</p>
+    `
+    registration.style.width = '6%'
+    userName.style.marginTop = '6px'
+    userName.style.marginBottom = '0px'
+})

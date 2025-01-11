@@ -8,6 +8,10 @@
 </head>
 <body>
     <header>
+            <div class="registration">
+                <input class="sign-up" type="button" value="Зареєструватись">
+            </div>
+
         <h1>Інтернет-магазин</h1>
         <div class="search-bar">
             <input type="text" id="search-input" placeholder="Пошук товарів...">
@@ -35,6 +39,26 @@
             </ul>
         </div>
     </header>
+
+         <div class="registration-form hidden">
+        <h2>Реєстрація</h2>
+        <form>
+          <label for="username">Ім'я користувача</label>
+          <input type="text" id="username" name="username" placeholder="Введіть ваше ім'я" required>
+    
+          <label for="email">Електронна пошта</label>
+          <input type="email" id="email" name="email" placeholder="Введіть вашу пошту" required>
+    
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+    
+          <label for="confirm-password">Підтвердіть пароль</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Повторіть пароль" required>
+    
+          <button class="registration-form-button" type="submit">Зареєструватися</button>
+          <button class="registration-form-button-close" type="button">Скасувати</button>
+        </form>
+      </div>
       
       <!-- Модальне вікно -->
       <div id="modal">
